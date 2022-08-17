@@ -38,6 +38,7 @@ class MainMenuState extends MusicBeatState
 		'options'
 	];
 
+
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
