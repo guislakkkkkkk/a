@@ -208,9 +208,16 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
+				if (optionShit[curSelected] == 'pajero')
 				{
-					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
+					selectedSomethin = true;
+					FlxG.sound.play(Paths.sound('masturbasuceso'));
+					PlayState.storyPlaylist = ['masturbasuceso'];
+					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-pajero', PlayState.storyPlaylist[0].toLowerCase());
+					PlayState.campaignScore = 0;
+					PlayState.campaignMisses = 0;
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+					FreeplayState.destroyFreeplayVocals();
 				}
 				else
 				{
