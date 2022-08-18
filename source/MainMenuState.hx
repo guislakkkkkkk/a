@@ -202,7 +202,9 @@ class MainMenuState extends MusicBeatState
 				MusicBeatState.switchState(new TitleState());
 			}
 
-			if (optionShit[curSelected] == 'pajero')
+			if (controls.ACCEPT)
+			{
+				if (optionShit[curSelected] == 'pajero')
 				{
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('masturbasuceso'));
